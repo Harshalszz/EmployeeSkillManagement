@@ -8,13 +8,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { SkillComponent } from './skill/skill.component';
 import { AddSkillComponent } from './add-skill/add-skill.component';
 import { SummaryComponent } from './summary/summary.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkillComponent,
     AddSkillComponent,
-    SummaryComponent
+    SummaryComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

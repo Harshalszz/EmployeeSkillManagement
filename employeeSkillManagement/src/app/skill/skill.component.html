@@ -1,54 +1,6 @@
-<!-- <p>skill works!</p>
-<div class="container mt-4" >
-    <div class="card ">
-        <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">Skill Section</a>
-                </li>
-                
-              </ul>
-          </div>
-        <div class="card-body">
-            
-            <h3 class="card-title">Add Skill... </h3>
-
-            <form>
-                <div class="form-group">
-                  <label>Skill</label>
-                  <input type="text" [(ngModel)]="skillName" [ngModelOptions]="{standalone: true}"  class="form-control" id="name" placeholder="Enter Name">
-                </div>
-                <div class="form-group">
-                    <label>Rating</label>
-                    <input type="text" [(ngModel)]="skillRating" [ngModelOptions]="{standalone: true}"  class="form-control" id="rating" placeholder="Enter Rating">
-              
-                  </div>
-                  <div class="form-group">
-                    <label>YearOfExp</label>
-                    <input type="text" [(ngModel)]="skillExp" [ngModelOptions]="{standalone: true}"  class="form-control" id="yearOfExp" placeholder="Enter Year of Experience">
-              
-                  </div>
-                  <div class="form-group">
-                    <label>Duration</label>
-                    <input type="text" [(ngModel)]="skillDuration" [ngModelOptions]="{standalone: true}"  class="form-control" id="duration" placeholder="Enter Duration">
-              
-                  </div>
-                  
-                  <div class="form-group">
-                    <label>Certification</label>
-                    <input type="text" [(ngModel)]="skillCertificate" [ngModelOptions]="{standalone: true}"  class="form-control" id="certification" placeholder="Enter any Certification">
-              
-                  </div>
-                  
-                
-                <button type="submit" class="btn btn-primary mt-4" (click)="save1()" >Submit</button>
-              </form>
-        </div>
-            
-    
-    </div> -->
-
-<!-- <div class="bg-success p-2 text-dark bg-opacity-25"></div> -->
+<div class="container text-center mb-5">
+    <h3>Employee's Skills</h3>
+</div>
 
 <div class="container mt-5">
 
@@ -65,12 +17,12 @@
                 <div class="accordion-body">
 
                     <form>
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label>Skill</label>
                             <input type="text" [(ngModel)]="skillName" [ngModelOptions]="{standalone: true}"
                                 class="form-control" id="name" placeholder="Enter Name">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label for="inputState" class="form-label">Rating</label>
                             <select id="inputState" class="form-select" [(ngModel)]="skillRating" [ngModelOptions]="{standalone: true}">
                                 <option selected>Choose...</option>
@@ -92,24 +44,42 @@
                                 class="form-control" id="rating" placeholder="Enter Rating">
 
                         </div> -->
-                        <div class="form-group">
-                            <label>YearOfExp</label>
+                        <div class="form-group mb-2">
+                            <label>Year Of Experience</label>
                             <input type="text" [(ngModel)]="skillExp" [ngModelOptions]="{standalone: true}"
                                 class="form-control" id="yearOfExp" placeholder="Enter Year of Experience">
 
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-2">
                             <label>Duration</label>
                             <input type="text" [(ngModel)]="skillDuration" [ngModelOptions]="{standalone: true}"
                                 class="form-control" id="duration" placeholder="Enter Duration">
 
                         </div>
 
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label>Certification</label>
                             <input type="text" [(ngModel)]="skillCertificate" [ngModelOptions]="{standalone: true}"
                                 class="form-control" id="certification" placeholder="Enter any Certification">
 
+                        </div> -->
+
+                        <div class="form-group">
+                            <label for="inputState" class="form-label">Certification</label>
+                            <select id="inputState" class="form-select" [(ngModel)]="skillCertificate" [ngModelOptions]="{standalone: true}" placeholder="Enter any Certification">
+                                <option selected>Choose...</option>
+                                <option value="None">None</option>
+                                <option value="Project Management Professional">Project Management Professional</option>
+                                <option value="AWS Certified Developer-Associate"> AWS Certified Developer-Associate</option>
+                                <option value="AWS Certified Solutions Architect-Associate">AWS Certified Solutions Architect-Associate</option>
+                                <option value="Certified Information Systems Security Professional (CISSP)">Certified Information Systems Security Professional (CISSP)</option>
+                                <option value="Cisco Certified Network Associate (CCNA)">Cisco Certified Network Associate (CCNA)</option>
+                                <option value="Certified ScrumMaster (CSM)">Certified ScrumMaster (CSM)</option>
+                                <option value="Salesforce Administrator Certification">Salesforce Administrator Certification</option>
+                                <option value="Oracle Certified Associate Java Programmer OCAJP">Oracle Certified Associate Java Programmer OCAJP</option>
+                                <option value="Certified Associate in Python Programming (PCAP)">Certified Associate in Python Programming (PCAP)</option>
+                                <option value="MongoDB Certified Developer Associate Exam">MongoDB Certified Developer Associate Exam</option>
+                            </select>
                         </div>
 
 
@@ -138,7 +108,7 @@
                     <th scope="col ">Sr.No.</th>
                     <th scope="col">Name</th>
                     <th scope="col">Rating</th>
-                    <th scope="col">Year of Experience</th>
+                    <th scope="col">YOF</th>
                     <th scope="col">Certification</th>
                     <th scope="col">Duration</th>
                 </tr>
