@@ -1,0 +1,164 @@
+<!-- <p>skill works!</p>
+<div class="container mt-4" >
+    <div class="card ">
+        <div class="card-header">
+            <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Skill Section</a>
+                </li>
+                
+              </ul>
+          </div>
+        <div class="card-body">
+            
+            <h3 class="card-title">Add Skill... </h3>
+
+            <form>
+                <div class="form-group">
+                  <label>Skill</label>
+                  <input type="text" [(ngModel)]="skillName" [ngModelOptions]="{standalone: true}"  class="form-control" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <label>Rating</label>
+                    <input type="text" [(ngModel)]="skillRating" [ngModelOptions]="{standalone: true}"  class="form-control" id="rating" placeholder="Enter Rating">
+              
+                  </div>
+                  <div class="form-group">
+                    <label>YearOfExp</label>
+                    <input type="text" [(ngModel)]="skillExp" [ngModelOptions]="{standalone: true}"  class="form-control" id="yearOfExp" placeholder="Enter Year of Experience">
+              
+                  </div>
+                  <div class="form-group">
+                    <label>Duration</label>
+                    <input type="text" [(ngModel)]="skillDuration" [ngModelOptions]="{standalone: true}"  class="form-control" id="duration" placeholder="Enter Duration">
+              
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Certification</label>
+                    <input type="text" [(ngModel)]="skillCertificate" [ngModelOptions]="{standalone: true}"  class="form-control" id="certification" placeholder="Enter any Certification">
+              
+                  </div>
+                  
+                
+                <button type="submit" class="btn btn-primary mt-4" (click)="save1()" >Submit</button>
+              </form>
+        </div>
+            
+    
+    </div> -->
+
+<!-- <div class="bg-success p-2 text-dark bg-opacity-25"></div> -->
+
+<div class="container mt-5">
+
+    <div class="accordion bg-c-primary" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <strong>Add Skills <span class="bi-search"></span></strong>
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                    <form>
+                        <div class="form-group">
+                            <label>Skill</label>
+                            <input type="text" [(ngModel)]="skillName" [ngModelOptions]="{standalone: true}"
+                                class="form-control" id="name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputState" class="form-label">Rating</label>
+                            <select id="inputState" class="form-select" [(ngModel)]="skillRating" [ngModelOptions]="{standalone: true}">
+                                <option selected>Choose...</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label>Rating</label>
+                            <input type="text" [(ngModel)]="skillRating" [ngModelOptions]="{standalone: true}"
+                                class="form-control" id="rating" placeholder="Enter Rating">
+
+                        </div> -->
+                        <div class="form-group">
+                            <label>YearOfExp</label>
+                            <input type="text" [(ngModel)]="skillExp" [ngModelOptions]="{standalone: true}"
+                                class="form-control" id="yearOfExp" placeholder="Enter Year of Experience">
+
+                        </div>
+                        <div class="form-group">
+                            <label>Duration</label>
+                            <input type="text" [(ngModel)]="skillDuration" [ngModelOptions]="{standalone: true}"
+                                class="form-control" id="duration" placeholder="Enter Duration">
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Certification</label>
+                            <input type="text" [(ngModel)]="skillCertificate" [ngModelOptions]="{standalone: true}"
+                                class="form-control" id="certification" placeholder="Enter any Certification">
+
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary mt-4" (click)="save1()">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<div>
+    <div class="container mt-4 border p-2 rounded">
+        <h3>Added Skill List</h3>
+        <table class="table table-striped">
+            <thead>
+                <h1 *ngIf="!isResultLoaded">Loading.................</h1>
+
+                <tr>
+                    <th scope="col ">Sr.No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Year of Experience</th>
+                    <th scope="col">Certification</th>
+                    <th scope="col">Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let skill of SkillArray , let i = index">
+                    <th scope="row">{{i+1 }}</th>
+                    <td>{{skill.skillName | uppercase}}</td>
+                    <td>{{skill.skillRating }}</td>
+                    <td>{{skill.skillExp }}</td>
+                    <td>{{skill.skillDuration }}</td>
+                    <td>{{skill.skillCertificate }}</td>
+                    <td>
+                        <button type="button" class="btn btn-success m-1" (click)="setUpdate1(skill)">Edit</button>
+
+                        <button type="button" class="btn btn-danger " (click)="deleteSkill(skill)">Delete</button>
+
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
